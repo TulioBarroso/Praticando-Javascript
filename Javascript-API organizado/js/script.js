@@ -18,19 +18,12 @@ function converterPokemonHtml(pokemon){
 const pokemonList = document.getElementById('pokemonList') //OL
 
 pokeApi.getPokemons().then((pokemons = [])=>{
-
-                                
-    const newList = pokemons.map((pokemon) => converterPokemonHtml(pokemon))
-
-        //return pokemon.name //return que aparece os nomes do pokemons
-
-    const newHtml = newList.join('') //pegar a nova lista e juntar com os elementos
-
-    pokemonList.innerHTML += newHtml
+    pokemonList.innerHTML += pokemons.map(converterPokemonHtml).join('')
+//Pega a lista pokemon (innerHTML) += mapeia essa lista, converte para html e junta esses li sem separador
 })
 
 // const listItens = []
-        
+
     // //for para pecorrer a lista
     // for (let i = 0; i < pokemons.length; i++) {
     //     const pokemon = pokemons[i];
