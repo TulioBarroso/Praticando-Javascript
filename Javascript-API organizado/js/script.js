@@ -17,17 +17,12 @@ function converterPokemonHtml(pokemon){
 
 const pokemonList = document.getElementById('pokemonList') //OL
 pokeApi.getPokemons().then((pokemons)=>{
+    const listItens = []
         
-     //console.log(pokemonList)
-
     //for para pecorrer a lista
     for (let i = 0; i < pokemons.length; i++) {
         const pokemon = pokemons[i];
-
-        //console.log(converterPokemonHtml(pokemon))
-
-        pokemonList.innerHTML += converterPokemonHtml(pokemon)
+        listItens.push(converterPokemonHtml(pokemon))
     }
+    console.log(listItens)
  })
- 
-.catch((error) => console.error(error))
