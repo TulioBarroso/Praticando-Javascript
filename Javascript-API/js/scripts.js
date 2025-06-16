@@ -11,6 +11,8 @@ fetch(url)  //Se o fetch dá certo, chama o .then
 .then((response)=> response.JSON()) //Converter o body que está em readblestream para json
      
 .then((jsonBody)=> console.log(jsonBody))      
-     
+
+.then((pokemonList)=> console.log(pokemonList))     
+
 .catch((error)=> console.error(error)) //caso dê algum erro
 
