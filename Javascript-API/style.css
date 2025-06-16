@@ -1,0 +1,23 @@
+.content{
+    padding: 7px;
+    padding-left: 10px;
+    background-color: rgb(2, 151, 156);
+    color: aliceblue;
+    border-radius: 10px;
+
+    li{
+        display: flex;
+        flex-direction: column;
+    }
+    .types{
+        margin-top: 10px;
+        li{
+            background-color: rgb(1, 82, 85);
+            margin: 3px;
+            padding-left: 14px;
+            padding: 7px;
+            width: 15%;
+            border-radius: 10px;
+        }
+    }
+}
