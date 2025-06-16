@@ -7,12 +7,13 @@ const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
 //Oque o fetch retorna? uma promise(um processamento assincrono, "não tenho" a resposta de imediato)
 fetch(url)  //Se o fetch dá certo, chama o .then
-.then((response)=>{
-     console.log(response) 
+.then((response)=>{ //Converter o body que está em readblestream para json
+     return response.JSON()
 })
+.then((jsonBody)=>{
+    console.log(jsonBody)
+}) 
 .catch((error)=>{ //caso dê algum erro
       console.error(error) 
 })
-.finally(()=>{  //Independente do sucesso ou fracasso, se eu quiser executar algo depois (finally)
-      console.log('Requisição concluida')
-}) 
+
